@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		CCE647271A9684B80023C08C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE647261A9684B80023C08C /* AppDelegate.swift */; };
-		CCE647291A9684B80023C08C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE647281A9684B80023C08C /* ViewController.swift */; };
-		CCE6472C1A9684B80023C08C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE6472A1A9684B80023C08C /* Main.storyboard */; };
+		CCE647291A9684B80023C08C /* ConventionalAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE647281A9684B80023C08C /* ConventionalAuthViewController.swift */; };
 		CCE6472E1A9684B80023C08C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCE6472D1A9684B80023C08C /* Images.xcassets */; };
 		CCE647311A9684B80023C08C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCE6472F1A9684B80023C08C /* LaunchScreen.xib */; };
 		CCE6473D1A9684B80023C08C /* TwitterAuthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE6473C1A9684B80023C08C /* TwitterAuthTests.swift */; };
+		CCE6474A1A9685380023C08C /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE647461A96852F0023C08C /* LlamaKit.framework */; };
+		CCE6474B1A9685380023C08C /* LlamaKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCE647461A96852F0023C08C /* LlamaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCE6474C1A9685380023C08C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE647471A96852F0023C08C /* ReactiveCocoa.framework */; };
+		CCE6474D1A9685380023C08C /* ReactiveCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CCE647471A96852F0023C08C /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CCE647501A96854D0023C08C /* TwitterAuth-Conventional.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE6474F1A96854D0023C08C /* TwitterAuth-Conventional.swift */; };
+		CCE647521A968A430023C08C /* TwitterAuth-ReactiveCocoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE647511A968A430023C08C /* TwitterAuth-ReactiveCocoa.swift */; };
+		CCE647541A968A7E0023C08C /* TwitterAuth-Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE647531A968A7E0023C08C /* TwitterAuth-Errors.swift */; };
+		CCE647561A969CAC0023C08C /* ReactiveCocoaAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE647551A969CAC0023C08C /* ReactiveCocoaAuthViewController.swift */; };
+		CCE6475C1A969CE30023C08C /* AAPLPlaceholderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE6475B1A969CE30023C08C /* AAPLPlaceholderView.m */; };
+		CCE6475F1A969E510023C08C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE6475E1A969E510023C08C /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,17 +34,41 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CCE6474E1A9685380023C08C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CCE6474B1A9685380023C08C /* LlamaKit.framework in Embed Frameworks */,
+				CCE6474D1A9685380023C08C /* ReactiveCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		CCE647211A9684B80023C08C /* TwitterAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE647251A9684B80023C08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCE647261A9684B80023C08C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CCE647281A9684B80023C08C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCE6472B1A9684B80023C08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CCE647281A9684B80023C08C /* ConventionalAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConventionalAuthViewController.swift; sourceTree = "<group>"; };
 		CCE6472D1A9684B80023C08C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CCE647301A9684B80023C08C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CCE647361A9684B80023C08C /* TwitterAuthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitterAuthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCE6473B1A9684B80023C08C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCE6473C1A9684B80023C08C /* TwitterAuthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterAuthTests.swift; sourceTree = "<group>"; };
+		CCE647461A96852F0023C08C /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = SOURCE_ROOT; };
+		CCE647471A96852F0023C08C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
+		CCE6474F1A96854D0023C08C /* TwitterAuth-Conventional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TwitterAuth-Conventional.swift"; sourceTree = "<group>"; };
+		CCE647511A968A430023C08C /* TwitterAuth-ReactiveCocoa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TwitterAuth-ReactiveCocoa.swift"; sourceTree = "<group>"; };
+		CCE647531A968A7E0023C08C /* TwitterAuth-Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TwitterAuth-Errors.swift"; sourceTree = "<group>"; };
+		CCE647551A969CAC0023C08C /* ReactiveCocoaAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveCocoaAuthViewController.swift; sourceTree = "<group>"; };
+		CCE647591A969CE20023C08C /* TwitterAuth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwitterAuth-Bridging-Header.h"; sourceTree = "<group>"; };
+		CCE6475A1A969CE30023C08C /* AAPLPlaceholderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLPlaceholderView.h; sourceTree = "<group>"; };
+		CCE6475B1A969CE30023C08C /* AAPLPlaceholderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AAPLPlaceholderView.m; sourceTree = "<group>"; };
+		CCE6475E1A969E510023C08C /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE6474A1A9685380023C08C /* LlamaKit.framework in Frameworks */,
+				CCE6474C1A9685380023C08C /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,11 +112,11 @@
 		CCE647231A9684B80023C08C /* TwitterAuth */ = {
 			isa = PBXGroup;
 			children = (
-				CCE647261A9684B80023C08C /* AppDelegate.swift */,
-				CCE647281A9684B80023C08C /* ViewController.swift */,
-				CCE6472A1A9684B80023C08C /* Main.storyboard */,
-				CCE6472D1A9684B80023C08C /* Images.xcassets */,
-				CCE6472F1A9684B80023C08C /* LaunchScreen.xib */,
+				CCE6475E1A969E510023C08C /* AuthViewController.swift */,
+				CCE6475D1A969D0B0023C08C /* Misc */,
+				CCE647581A969CB70023C08C /* Conventional Auth */,
+				CCE647571A969CB20023C08C /* ReactiveCocoa Auth */,
+				CCE647531A968A7E0023C08C /* TwitterAuth-Errors.swift */,
 				CCE647241A9684B80023C08C /* Supporting Files */,
 			);
 			path = TwitterAuth;
@@ -90,6 +125,8 @@
 		CCE647241A9684B80023C08C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCE647461A96852F0023C08C /* LlamaKit.framework */,
+				CCE647471A96852F0023C08C /* ReactiveCocoa.framework */,
 				CCE647251A9684B80023C08C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -112,6 +149,37 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CCE647571A969CB20023C08C /* ReactiveCocoa Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CCE647551A969CAC0023C08C /* ReactiveCocoaAuthViewController.swift */,
+				CCE647511A968A430023C08C /* TwitterAuth-ReactiveCocoa.swift */,
+			);
+			name = "ReactiveCocoa Auth";
+			sourceTree = "<group>";
+		};
+		CCE647581A969CB70023C08C /* Conventional Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CCE647281A9684B80023C08C /* ConventionalAuthViewController.swift */,
+				CCE6474F1A96854D0023C08C /* TwitterAuth-Conventional.swift */,
+			);
+			name = "Conventional Auth";
+			sourceTree = "<group>";
+		};
+		CCE6475D1A969D0B0023C08C /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CCE647591A969CE20023C08C /* TwitterAuth-Bridging-Header.h */,
+				CCE6472D1A9684B80023C08C /* Images.xcassets */,
+				CCE6472F1A9684B80023C08C /* LaunchScreen.xib */,
+				CCE6475A1A969CE30023C08C /* AAPLPlaceholderView.h */,
+				CCE6475B1A969CE30023C08C /* AAPLPlaceholderView.m */,
+				CCE647261A9684B80023C08C /* AppDelegate.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,6 +190,7 @@
 				CCE6471D1A9684B80023C08C /* Sources */,
 				CCE6471E1A9684B80023C08C /* Frameworks */,
 				CCE6471F1A9684B80023C08C /* Resources */,
+				CCE6474E1A9685380023C08C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,7 +261,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCE6472C1A9684B80023C08C /* Main.storyboard in Resources */,
 				CCE647311A9684B80023C08C /* LaunchScreen.xib in Resources */,
 				CCE6472E1A9684B80023C08C /* Images.xcassets in Resources */,
 			);
@@ -212,8 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCE647291A9684B80023C08C /* ViewController.swift in Sources */,
+				CCE6475C1A969CE30023C08C /* AAPLPlaceholderView.m in Sources */,
+				CCE647521A968A430023C08C /* TwitterAuth-ReactiveCocoa.swift in Sources */,
+				CCE647561A969CAC0023C08C /* ReactiveCocoaAuthViewController.swift in Sources */,
+				CCE647291A9684B80023C08C /* ConventionalAuthViewController.swift in Sources */,
+				CCE6475F1A969E510023C08C /* AuthViewController.swift in Sources */,
+				CCE647541A968A7E0023C08C /* TwitterAuth-Errors.swift in Sources */,
 				CCE647271A9684B80023C08C /* AppDelegate.swift in Sources */,
+				CCE647501A96854D0023C08C /* TwitterAuth-Conventional.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +310,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CCE6472A1A9684B80023C08C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCE6472B1A9684B80023C08C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CCE6472F1A9684B80023C08C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -338,9 +404,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TwitterAuth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TwitterAuth/TwitterAuth-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -348,9 +422,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TwitterAuth/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TwitterAuth/TwitterAuth-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -407,6 +488,7 @@
 				CCE647421A9684B80023C08C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CCE647431A9684B80023C08C /* Build configuration list for PBXNativeTarget "TwitterAuthTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +497,7 @@
 				CCE647451A9684B80023C08C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
