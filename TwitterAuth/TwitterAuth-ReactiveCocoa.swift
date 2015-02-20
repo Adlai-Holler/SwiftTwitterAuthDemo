@@ -7,7 +7,6 @@ private let accountStore = ACAccountStore()
 
 public func authWithTwitterAccount(#sourceViewController: UIViewController) -> SignalProducer<String, NSError> {
     return getAccessToTwitterAccounts()
-        |> observeOn(UIScheduler())
         |> mergeMap { getPreferredTwitterAccountFromUser($0, sourceViewController) }
         |> mergeMap { authWithServer($0) }
 }
@@ -15,13 +14,18 @@ public func authWithTwitterAccount(#sourceViewController: UIViewController) -> S
 private func getAccessToTwitterAccounts() -> SignalProducer<[ACAccount], NSError> {
     return SignalProducer {sink, disposable in
         let twitterType = accountStore.accountTypeWithAccountTypeIdentifier(ACAccountTypeIdentifierTwitter)!
+        let sched = UIScheduler()
         accountStore.requestAccessToAccountsWithType(twitterType, options: nil) { (granted, error) -> Void in
             if !granted {
-                sendError(sink, error ?? twitterUserRefusedAccessErr)
+                sched.schedule {
+                    sendError(sink, error ?? twitterUserRefusedAccessErr)
+                }
             } else {
                 let accounts = accountStore.accountsWithAccountType(twitterType) as [ACAccount]
-                sendNext(sink, accounts)
-                sendCompleted(sink)
+                sched.schedule {
+                    sendNext(sink, accounts)
+                    sendCompleted(sink)
+                }
             }
         }
     }
@@ -54,13 +58,15 @@ private func getPreferredTwitterAccountFromUser(accounts: [ACAccount], sourceVie
 
 private func authWithServer(account: ACAccount) -> SignalProducer<String, NSError> {
     return SignalProducer { sink, disposable in
-        let hasError = arc4random_uniform(100) >= 50
-        if hasError {
-            sendError(sink, twitterAuthNetworkErr)
-        } else {
-            sendNext(sink, "Success!")
-            sendCompleted(sink)
+        let future = dispatch_time(DISPATCH_TIME_NOW, Int64(NSEC_PER_SEC) * 2)
+        dispatch_after(future, dispatch_get_main_queue()) {
+            let hasError = arc4random_uniform(100) >= 50
+            if hasError {
+                sendError(sink, twitterAuthNetworkErr)
+            } else {
+                sendNext(sink, "Success!")
+                sendCompleted(sink)
+            }
         }
     }
-    |> delay(2.0, onScheduler: QueueScheduler.mainQueueScheduler)
 }
